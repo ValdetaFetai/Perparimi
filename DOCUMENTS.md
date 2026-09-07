@@ -7,7 +7,7 @@ This is a static school website for Sh.F.K. Përparimi in Çegran.
 - GitHub repository: `https://github.com/ValdetaFetai/Perparimi`
 - Production branch: `main`
 - Vercel project: `perparimi`
-- Vercel deployment URL: `https://perparimi-roksf9h34-valdetaalili-8984.vercel.app`
+- Public Vercel URL: `https://perparimi.vercel.app/`
 - Framework: plain HTML, CSS, and JavaScript
 - Build command: none
 - Output directory: repository root (`./`)
