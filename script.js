@@ -30,16 +30,24 @@ const menuToggle = document.querySelector("#menuToggle");
 const mobileMenu = document.querySelector("#mobileMenu");
 
 if (menuToggle && mobileMenu) {
-    menuToggle.addEventListener("click", () => {
-        const isOpen = mobileMenu.classList.toggle("open");
+    const setMenuState = (isOpen) => {
+        mobileMenu.classList.toggle("open", isOpen);
+        mobileMenu.hidden = !isOpen;
         menuToggle.setAttribute("aria-expanded", String(isOpen));
+        menuToggle.setAttribute("aria-label", isOpen ? "Mbyll menynë" : "Hap menynë");
+    };
+
+    menuToggle.addEventListener("click", () => {
+        const isOpen = !mobileMenu.classList.contains("open");
+        setMenuState(isOpen);
     });
 
     mobileMenu.querySelectorAll("a").forEach((link) => {
-        link.addEventListener("click", () => {
-            mobileMenu.classList.remove("open");
-            menuToggle.setAttribute("aria-expanded", "false");
-        });
+        link.addEventListener("click", () => setMenuState(false));
+    });
+
+    window.addEventListener("resize", () => {
+        if (window.innerWidth > 1050) setMenuState(false);
     });
 }
 
