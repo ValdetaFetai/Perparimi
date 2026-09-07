@@ -1,8 +1,8 @@
 const documents = [
     {
         title: "Programi vjetor 2026",
-        description: "Dokument Word",
-        file: "documents/programi-vjetor-2026.docx",
+        description: "PDF dokument",
+        file: "documents/programi-vjetor-2026.pdf",
         icon: "📄"
     }
 ];
