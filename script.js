@@ -44,6 +44,18 @@ homeLinks.forEach((link) => {
     });
 });
 
+const historyToggle = document.querySelector("#historyToggle");
+const historyMore = document.querySelector("#historyMore");
+
+if (historyToggle && historyMore) {
+    historyToggle.addEventListener("click", () => {
+        const isExpanded = !historyMore.hidden;
+        historyMore.hidden = isExpanded;
+        historyToggle.setAttribute("aria-expanded", String(!isExpanded));
+        historyToggle.textContent = isExpanded ? "Lexo më shumë" : "Shfaq më pak";
+    });
+}
+
 if (menuToggle && mobileMenu) {
     const setMenuState = (isOpen) => {
         mobileMenu.classList.toggle("open", isOpen);
