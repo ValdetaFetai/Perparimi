@@ -80,11 +80,37 @@ if (menuToggle && mobileMenu) {
 
 const header = document.querySelector("#header");
 const backToTop = document.querySelector("#backToTop");
+const navLinks = [...document.querySelectorAll('.nav-link[href^="#"]')];
+const sections = [...document.querySelectorAll('main section[id], footer[id]')];
+
+const setActiveNavLink = () => {
+    let currentId = "ballina";
+
+    sections.forEach((section) => {
+        if (window.scrollY >= section.offsetTop - 150) {
+            currentId = section.id;
+        }
+    });
+
+    navLinks.forEach((link) => {
+        const isActive = link.getAttribute("href") === `#${currentId}`;
+        link.classList.toggle("active", isActive);
+    });
+};
+
+navLinks.forEach((link) => {
+    link.addEventListener("click", () => {
+        navLinks.forEach((navLink) => navLink.classList.toggle("active", navLink === link));
+    });
+});
 
 window.addEventListener("scroll", () => {
     header?.classList.toggle("scrolled", window.scrollY > 20);
     backToTop?.classList.toggle("show", window.scrollY > 500);
+    setActiveNavLink();
 });
+
+setActiveNavLink();
 
 backToTop?.addEventListener("click", () => {
     window.scrollTo({ top: 0, behavior: "smooth" });

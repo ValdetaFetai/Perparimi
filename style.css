@@ -1,4 +1,4 @@
-/* =====================================================
+﻿/* =====================================================
    SH.F.K. PËRPARIMI – ÇEGRAN
    MAIN STYLESHEET
 ===================================================== */
@@ -101,7 +101,7 @@ textarea {
 
     z-index: 1000;
 
-    background: rgba(255, 255, 255, 0.96);
+    background: rgba(224, 234, 245, 0.96);
 
     backdrop-filter: blur(15px);
 
@@ -233,6 +233,7 @@ textarea {
 .nav-link.active {
 
     color: var(--navy);
+    font-weight: 700;
 }
 
 
@@ -2497,7 +2498,7 @@ textarea {
 
     z-index: 1000;
 
-    background: rgba(255, 255, 255, 0.96);
+    background: rgba(224, 234, 245, 0.96);
 
     backdrop-filter: blur(15px);
 
@@ -2628,7 +2629,8 @@ textarea {
 .nav-link:hover,
 .nav-link.active {
 
-    color: var(--blue);
+    color: var(--navy);
+    font-weight: 700;
 }
 
 
