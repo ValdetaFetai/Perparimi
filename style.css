@@ -1,4 +1,4 @@
-﻿/* =====================================================
+/* =====================================================
    SH.F.K. PËRPARIMI – ÇEGRAN
    MAIN STYLESHEET
 ===================================================== */
@@ -1238,11 +1238,12 @@ textarea {
 
 .staff-placeholder {
 
+    width: 100%;
     height: 260px;
 
-    display: grid;
+    display: block;
 
-    place-items: center;
+    object-fit: cover;
 
     background:
         linear-gradient(
@@ -1250,8 +1251,6 @@ textarea {
             #eaf4ff,
             #dcecff
         );
-
-    font-size: 70px;
 }
 
 
@@ -3635,11 +3634,12 @@ textarea {
 
 .staff-placeholder {
 
+    width: 100%;
     height: 260px;
 
-    display: grid;
+    display: block;
 
-    place-items: center;
+    object-fit: cover;
 
     background:
         linear-gradient(
@@ -3647,8 +3647,6 @@ textarea {
             #eaf4ff,
             #dcecff
         );
-
-    font-size: 70px;
 }
 
 
