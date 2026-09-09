@@ -52,7 +52,7 @@ if (historyToggle && historyMore) {
         const isExpanded = !historyMore.hidden;
         historyMore.hidden = isExpanded;
         historyToggle.setAttribute("aria-expanded", String(!isExpanded));
-        historyToggle.textContent = isExpanded ? "Lexo më shumë" : "Shfaq më pak";
+        historyToggle.textContent = isExpanded ? "Lexo më shumë" : "Lexo më pak";
     });
 }
 
@@ -91,3 +91,4 @@ backToTop?.addEventListener("click", () => {
 });
 
 document.querySelector("#currentYear").textContent = new Date().getFullYear();
+
