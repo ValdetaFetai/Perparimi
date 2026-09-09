@@ -3680,6 +3680,79 @@ textarea {
 }
 
 
+.document-details {
+
+    flex: 1;
+
+    min-width: 0;
+}
+
+
+.document-actions {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    margin-left: auto;
+
+    flex-wrap: wrap;
+}
+
+
+.document-open,
+.document-download {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 10px 14px;
+
+    border-radius: 8px;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    text-decoration: none;
+
+    transition: var(--transition);
+}
+
+
+.document-open {
+
+    background: #eaf4ff;
+
+    color: var(--navy);
+}
+
+
+.document-open:hover {
+
+    background: #dceeff;
+}
+
+
+.document-download {
+
+    background: var(--navy);
+
+    color: white;
+}
+
+
+.document-download:hover {
+
+    background: var(--navy-2);
+}
+
+
 .document-icon {
 
     width: 45px;
@@ -3697,7 +3770,7 @@ textarea {
 }
 
 
-.document-item h3 {
+.document-item h4 {
 
     font-size: 14px;
 
@@ -3710,16 +3783,6 @@ textarea {
     font-size: 11px;
 
     color: var(--gray-500);
-}
-
-
-.document-item .download {
-
-    margin-left: auto;
-
-    font-size: 22px;
-
-    color: var(--blue);
 }
 
 

@@ -14,20 +14,35 @@ if (documentList) {
         documentList.innerHTML = '<p class="documents-empty">Nuk ka dokumente të publikuara ende.</p>';
     } else {
         documentList.innerHTML = documents.map((document) => `
-            <a href="${document.file}" class="document-item" download>
+            <div class="document-item">
                 <div class="document-icon" aria-hidden="true">${document.icon}</div>
-                <div>
+                <div class="document-details">
                     <h4>${document.title}</h4>
                     <span>${document.description}</span>
                 </div>
-                <span class="download" aria-hidden="true">↓</span>
-            </a>
+                <div class="document-actions">
+                    <a href="${document.file}" class="document-open" target="_blank" rel="noopener noreferrer">Hap dokumentin</a>
+                    <a href="${document.file}" class="document-download" download>Shkarko PDF</a>
+                </div>
+            </div>
         `).join("");
     }
 }
 
 const menuToggle = document.querySelector("#menuToggle");
 const mobileMenu = document.querySelector("#mobileMenu");
+
+const homeLinks = document.querySelectorAll('a[href="#ballina"]');
+
+homeLinks.forEach((link) => {
+    link.addEventListener("click", (event) => {
+        event.preventDefault();
+        window.scrollTo({ top: 0, left: 0, behavior: "auto" });
+        if (window.location.hash !== "#ballina") {
+            history.replaceState(null, "", window.location.pathname + window.location.search + "#ballina");
+        }
+    });
+});
 
 if (menuToggle && mobileMenu) {
     const setMenuState = (isOpen) => {
