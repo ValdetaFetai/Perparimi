@@ -1,5 +1,72 @@
 /* =====================================================
-   SH.F.K. PËRPARIMI – ÇEGRAN
+   SH.F.K. 
+
+
+.contact-item a {
+
+    color: var(--navy);
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    text-decoration: none;
+}
+
+
+.contact-item a:hover {
+
+    color: var(--blue);
+}
+
+
+.contact-map-card {
+
+    overflow: hidden;
+
+    background: var(--gray-50);
+
+    border: 1px solid rgba(18, 68, 124, 0.14);
+
+    border-radius: var(--radius);
+
+    box-shadow: var(--shadow-sm);
+}
+
+
+.contact-map {
+
+    width: 100%;
+    height: 280px;
+
+    display: block;
+
+    border: 0;
+}
+
+
+.contact-map-actions {
+
+    padding: 14px 16px;
+
+    border-top: 1px solid rgba(18, 68, 124, 0.14);
+
+    background: white;
+}
+
+
+.contact-directions {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 10px 18px;
+
+    font-size: 13px;
+}PËRPARIMI – ÇEGRAN
    MAIN STYLESHEET
 ===================================================== */
 
