@@ -48,6 +48,12 @@ const translations = {
             progress: "Përparim",
             progressSub: "Së bashku drejt suksesit"
         },
+        stats: {
+            students: "Nxënës",
+            teachers: "Mësimdhënës",
+            generations: "Gjenerata",
+            commitment: "Përkushtim"
+        },
         about: {
             label: "RRETH NESH",
             heading: "Historiku i shkollës",
@@ -144,6 +150,12 @@ const translations = {
             environmentSub: "Место за учење",
             progress: "Напредок",
             progressSub: "Заедно кон успехот"
+        },
+        stats: {
+            students: "Ученици",
+            teachers: "Наставници",
+            generations: "Генерации",
+            commitment: "Посветеност"
         },
         about: {
             label: "ЗА НАС",
@@ -252,6 +264,37 @@ const renderDocuments = (lang) => {
     }
 };
 
+const animateCounters = () => {
+    const counters = document.querySelectorAll(".counter");
+
+    counters.forEach((counter) => {
+        const target = Number(counter.dataset.target || 0);
+
+        if (!Number.isFinite(target)) return;
+
+        const duration = 1400;
+        const startValue = 0;
+        const startTime = performance.now();
+
+        const updateCounter = (currentTime) => {
+            const elapsed = currentTime - startTime;
+            const progress = Math.min(elapsed / duration, 1);
+            const easedProgress = 1 - Math.pow(1 - progress, 3);
+            const value = Math.round(startValue + (target - startValue) * easedProgress);
+
+            counter.textContent = value;
+
+            if (progress < 1) {
+                requestAnimationFrame(updateCounter);
+            } else {
+                counter.textContent = target;
+            }
+        };
+
+        requestAnimationFrame(updateCounter);
+    });
+};
+
 const getNestedTranslation = (obj, path) => {
     return path.split(".").reduce((accumulator, segment) => accumulator?.[segment], obj);
 };
@@ -273,6 +316,7 @@ const applyTranslations = (lang) => {
     });
 
     renderDocuments(selectedLang);
+    animateCounters();
     document.documentElement.lang = selectedLang;
     document.title = selectedLang === "mk" ? "Ш.Ф.К. Перпарими - Чегран" : "Sh.F.K. Përparimi - Çegran";
 
