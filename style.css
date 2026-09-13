@@ -636,6 +636,10 @@ textarea {
     object-fit: cover;
 
     object-position: center;
+
+    filter: saturate(1.20) contrast(1.10) brightness(0.92) sepia(0.06) hue-rotate(-4deg);
+
+    transform: scale(1.02);
 }
 
 
@@ -648,9 +652,10 @@ textarea {
     background:
         linear-gradient(
             90deg,
-            rgba(7, 27, 53, 0.94) 0%,
-            rgba(7, 27, 53, 0.78) 45%,
-            rgba(7, 27, 53, 0.30) 100%
+            rgba(7, 27, 53, 0.72) 0%,
+            rgba(7, 27, 53, 0.58) 38%,
+            rgba(7, 27, 53, 0.30) 62%,
+            rgba(7, 27, 53, 0.14) 100%
         );
 }
 
@@ -1101,7 +1106,9 @@ textarea {
 
     z-index: 2;
 
-    box-shadow: none;
+    box-shadow: 0 20px 45px rgba(7, 27, 53, 0.15);
+
+    filter: saturate(1.18) contrast(1.08) brightness(0.94) sepia(0.05) hue-rotate(-4deg);
 }
 
 
@@ -3053,6 +3060,10 @@ textarea {
     object-fit: cover;
 
     object-position: center;
+
+    filter: saturate(1.20) contrast(1.10) brightness(0.92) sepia(0.06) hue-rotate(-4deg);
+
+    transform: scale(1.02);
 }
 
 
@@ -3065,9 +3076,10 @@ textarea {
     background:
         linear-gradient(
             90deg,
-            rgba(7, 27, 53, 0.94) 0%,
-            rgba(7, 27, 53, 0.78) 45%,
-            rgba(7, 27, 53, 0.30) 100%
+            rgba(7, 27, 53, 0.72) 0%,
+            rgba(7, 27, 53, 0.58) 38%,
+            rgba(7, 27, 53, 0.30) 62%,
+            rgba(7, 27, 53, 0.14) 100%
         );
 }
 
@@ -3518,7 +3530,9 @@ textarea {
 
     z-index: 2;
 
-    box-shadow: none;
+    box-shadow: 0 20px 45px rgba(7, 27, 53, 0.15);
+
+    filter: saturate(1.18) contrast(1.08) brightness(0.94) sepia(0.05) hue-rotate(-4deg);
 }
 
 
@@ -5096,3 +5110,131 @@ textarea {
 
 
 
+
+@media (prefers-color-scheme: dark) {
+
+    :root {
+        color-scheme: dark;
+
+        --blue: #7bc0ff;
+        --blue-light: #a3d2ff;
+        --navy: #edf4ff;
+        --navy-2: #d8ebff;
+        --black: #f4f8fc;
+        --white: #081722;
+        --gray-50: #0d1d2b;
+        --gray-100: #152c3e;
+        --gray-200: #1e3b53;
+        --gray-500: #b5c5d4;
+        --gray-700: #ebf4ff;
+
+        --shadow-sm:
+            0 4px 15px rgba(2, 8, 16, 0.48);
+
+        --shadow:
+            0 15px 40px rgba(2, 8, 16, 0.56);
+
+        --shadow-lg:
+            0 25px 70px rgba(2, 8, 16, 0.68);
+    }
+
+    body {
+        background:
+            radial-gradient(circle at top, rgba(74, 112, 148, 0.48), transparent 38%),
+            linear-gradient(180deg, #06141d 0%, #0d1c2a 100%);
+        color: var(--black);
+    }
+
+    .header {
+        background: rgba(8, 22, 34, 0.82);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+        backdrop-filter: blur(14px);
+    }
+
+    .header-tools,
+    .language-switcher,
+    .mobile-menu,
+    .quick-card,
+    .staff-card,
+    .classes-card,
+    .news-card,
+    .document-item,
+    .contact-item,
+    .contact-form,
+    .about-content,
+    .history-block,
+    .footer,
+    .section {
+        background-color: rgba(16, 30, 44, 0.82);
+        border-color: rgba(255, 255, 255, 0.08);
+    }
+
+    .header-tools {
+        box-shadow: var(--shadow-sm);
+    }
+
+    .nav-link,
+    .mobile-menu a,
+    .school-name strong,
+    .school-name span,
+    .school-name small,
+    .quick-card strong,
+    .quick-card span,
+    .staff-card h3,
+    .staff-card p,
+    .classes-card h3,
+    .classes-card p,
+    .news-card h3,
+    .news-card p,
+    .document-item h3,
+    .document-item p,
+    .contact-item h3,
+    .contact-item a,
+    .contact-form label,
+    .section-heading h2,
+    .section-heading p,
+    .history-content,
+    .about-content p,
+    .footer {
+        color: var(--black);
+    }
+
+    .hero {
+        background: #06151f;
+    }
+
+    .hero-badge {
+        background: rgba(18, 35, 50, 0.58);
+        border-color: rgba(255,255,255,0.16);
+    }
+
+    .hero-image,
+    .about-image img {
+        filter: saturate(1.18) contrast(1.10) brightness(0.88) sepia(0.06) hue-rotate(-4deg);
+    }
+
+    .hero-overlay {
+        background:
+            linear-gradient(
+                90deg,
+                rgba(7, 27, 53, 0.86) 0%,
+                rgba(7, 27, 53, 0.68) 36%,
+                rgba(7, 27, 53, 0.34) 60%,
+                rgba(7, 27, 53, 0.18) 100%
+            );
+    }
+
+    .objectives-list li,
+    .history-list li,
+    .list-check li,
+    .news-card .news-date,
+    .contact-meta,
+    .document-item,
+    .mobile-menu a {
+        border-color: rgba(255,255,255,0.08);
+    }
+
+    .footer {
+        background: rgba(7, 19, 29, 0.97);
+    }
+}
