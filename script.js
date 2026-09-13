@@ -57,9 +57,19 @@ if (historyToggle && historyMore) {
 }
 
 if (menuToggle && mobileMenu) {
+    const mobileMenuOverlay = document.querySelector(".mobile-menu-overlay") || document.createElement("div");
+
+    if (!mobileMenuOverlay.classList.contains("mobile-menu-overlay")) {
+        mobileMenuOverlay.className = "mobile-menu-overlay";
+        mobileMenuOverlay.setAttribute("aria-hidden", "true");
+        document.body.appendChild(mobileMenuOverlay);
+    }
+
     const setMenuState = (isOpen) => {
         mobileMenu.classList.toggle("open", isOpen);
         mobileMenu.hidden = !isOpen;
+        mobileMenuOverlay.hidden = !isOpen;
+        mobileMenuOverlay.classList.toggle("visible", isOpen);
         menuToggle.setAttribute("aria-expanded", String(isOpen));
         menuToggle.setAttribute("aria-label", isOpen ? "Mbyll menynë" : "Hap menynë");
     };
@@ -68,6 +78,8 @@ if (menuToggle && mobileMenu) {
         const isOpen = !mobileMenu.classList.contains("open");
         setMenuState(isOpen);
     });
+
+    mobileMenuOverlay.addEventListener("click", () => setMenuState(false));
 
     mobileMenu.querySelectorAll("a").forEach((link) => {
         link.addEventListener("click", () => setMenuState(false));

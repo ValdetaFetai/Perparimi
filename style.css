@@ -435,6 +435,32 @@ textarea {
 }
 
 
+.mobile-menu-overlay {
+
+    position: fixed;
+
+    inset: 0;
+
+    background: rgba(15, 23, 42, 0.38);
+
+    z-index: 998;
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    transition: opacity 0.2s ease, visibility 0.2s ease;
+}
+
+
+.mobile-menu-overlay.visible {
+
+    opacity: 1;
+
+    visibility: visible;
+}
+
+
 .mobile-menu a {
 
     padding: 14px 5px;
@@ -2822,6 +2848,32 @@ textarea {
 }
 
 
+.mobile-menu-overlay {
+
+    position: fixed;
+
+    inset: 0;
+
+    background: rgba(15, 23, 42, 0.38);
+
+    z-index: 998;
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    transition: opacity 0.2s ease, visibility 0.2s ease;
+}
+
+
+.mobile-menu-overlay.visible {
+
+    opacity: 1;
+
+    visibility: visible;
+}
+
+
 .mobile-menu a {
 
     padding: 14px 5px;
@@ -4875,6 +4927,11 @@ textarea {
     }
 
 }
+
+
+
+
+
 
 
 
