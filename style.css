@@ -1,4 +1,4 @@
-/* =====================================================
+﻿/* =====================================================
    SH.F.K. 
 
 
@@ -920,9 +920,13 @@ textarea {
     display: grid;
 
     grid-template-columns:
-        repeat(2, minmax(0, 1fr));
+        1fr;
 
-    gap: 24px;
+    gap: 28px;
+
+    width: min(100%, 540px);
+
+    margin: 0 auto;
 }
 
 
@@ -3303,9 +3307,13 @@ textarea {
     display: grid;
 
     grid-template-columns:
-        repeat(2, minmax(0, 1fr));
+        1fr;
 
-    gap: 24px;
+    gap: 28px;
+
+    width: min(100%, 540px);
+
+    margin: 0 auto;
 }
 
 
@@ -4867,3 +4875,6 @@ textarea {
     }
 
 }
+
+
+
