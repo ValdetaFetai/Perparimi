@@ -514,6 +514,15 @@ textarea {
 
     flex-direction: column;
 
+    max-height: calc(100vh - 82px);
+    max-height: calc(100dvh - 82px);
+
+    overflow-y: auto;
+
+    overscroll-behavior: contain;
+
+    -webkit-overflow-scrolling: touch;
+
     box-shadow: none;
 
     transform: translateY(-20px);
@@ -549,6 +558,10 @@ textarea {
     visibility: hidden;
 
     transition: opacity 0.2s ease, visibility 0.2s ease;
+
+    touch-action: none;
+
+    overscroll-behavior: none;
 }
 
 
@@ -2384,6 +2397,9 @@ textarea {
 
     .mobile-menu {
         top: 72px;
+
+        max-height: calc(100vh - 72px);
+        max-height: calc(100dvh - 72px);
     }
 
     .logo {

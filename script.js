@@ -371,6 +371,8 @@ if (historyToggle && historyMore) {
 
 if (menuToggle && mobileMenu) {
     const mobileMenuOverlay = document.querySelector(".mobile-menu-overlay") || document.createElement("div");
+    let lockedScrollY = 0;
+    let bodyStylesBeforeLock = null;
 
     if (!mobileMenuOverlay.classList.contains("mobile-menu-overlay")) {
         mobileMenuOverlay.className = "mobile-menu-overlay";
@@ -378,7 +380,53 @@ if (menuToggle && mobileMenu) {
         document.body.appendChild(mobileMenuOverlay);
     }
 
+    const lockPageScroll = () => {
+        lockedScrollY = window.scrollY;
+        bodyStylesBeforeLock = {
+            position: document.body.style.position,
+            top: document.body.style.top,
+            left: document.body.style.left,
+            right: document.body.style.right,
+            width: document.body.style.width,
+            overflow: document.body.style.overflow,
+            paddingRight: document.body.style.paddingRight
+        };
+
+        const scrollbarWidth = window.innerWidth - document.documentElement.clientWidth;
+
+        document.documentElement.style.overflow = "hidden";
+        document.body.style.position = "fixed";
+        document.body.style.top = `-${lockedScrollY}px`;
+        document.body.style.left = "0";
+        document.body.style.right = "0";
+        document.body.style.width = "100%";
+        document.body.style.overflow = "hidden";
+        document.body.style.paddingRight = `${scrollbarWidth}px`;
+    };
+
+    const unlockPageScroll = () => {
+        const scrollY = lockedScrollY;
+        const previousStyles = bodyStylesBeforeLock;
+
+        document.documentElement.style.overflow = "";
+
+        if (previousStyles) {
+            Object.entries(previousStyles).forEach(([property, value]) => {
+                document.body.style[property] = value;
+            });
+        }
+
+        bodyStylesBeforeLock = null;
+        window.scrollTo(0, scrollY);
+    };
+
     const setMenuState = (isOpen) => {
+        if (isOpen) {
+            lockPageScroll();
+        } else if (bodyStylesBeforeLock) {
+            unlockPageScroll();
+        }
+
         mobileMenu.classList.toggle("open", isOpen);
         mobileMenu.hidden = !isOpen;
         mobileMenuOverlay.hidden = !isOpen;
