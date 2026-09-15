@@ -75,6 +75,8 @@
 
 :root {
 
+    color-scheme: light;
+
     --blue: #1261a0;
     --blue-light: #2f80c9;
     --navy: #071b35;
