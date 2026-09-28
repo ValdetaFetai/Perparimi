@@ -7,6 +7,13 @@ const documentsByLang = {
             icon: "📄",
             openText: "Hap dokumentin",
             downloadText: "Shkarko PDF"
+        },
+        {
+            title: "Angazhimet e mësimdhënësve për vitin shkollor 2026/2027",
+            description: "Fotografi JPG",
+            file: "aktivitet%20e%20ars.jpg",
+            icon: "🖼️",
+            openText: "Hap dokumentin"
         }
     ],
     mk: [
@@ -17,6 +24,13 @@ const documentsByLang = {
             icon: "📄",
             openText: "Отвори документ",
             downloadText: "Преземи PDF"
+        },
+        {
+            title: "Ангажмани на наставниците за учебната 2026/2027 година",
+            description: "JPG слика",
+            file: "aktivitet%20e%20ars.jpg",
+            icon: "🖼️",
+            openText: "Отвори документ"
         }
     ]
 };
@@ -257,7 +271,7 @@ const renderDocuments = (lang) => {
                 </div>
                 <div class="document-actions">
                     <a href="${document.file}" class="document-open" target="_blank" rel="noopener noreferrer">${document.openText}</a>
-                    <a href="${document.file}" class="document-download" download>${document.downloadText}</a>
+                    ${document.downloadText ? `<a href="${document.file}" class="document-download" download>${document.downloadText}</a>` : ""}
                 </div>
             </div>
         `).join("");
