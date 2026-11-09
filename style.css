@@ -2600,6 +2600,97 @@ textarea {
 
 }
 
+.activity-sector {
+    margin-top: 40px;
+}
+
+.activity-sector-title {
+    margin-bottom: 18px;
+    padding-left: 14px;
+    border-left: 4px solid var(--blue);
+    color: var(--navy);
+    font-size: 21px;
+    line-height: 1.35;
+}
+
+.activity-post {
+    display: grid;
+    grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
+    overflow: hidden;
+    border: 1px solid var(--gray-200);
+    border-radius: 8px;
+    background: white;
+    box-shadow: var(--shadow-sm);
+}
+
+.activity-post-media {
+    min-width: 0;
+    margin: 0;
+    background: #101820;
+}
+
+.activity-post-media video {
+    display: block;
+    width: 100%;
+    aspect-ratio: 145 / 76;
+    background: #101820;
+    object-fit: contain;
+}
+
+.activity-video-caption {
+    padding: 11px 16px;
+    color: #e7edf2;
+    font-size: 12px;
+}
+
+.activity-post-content {
+    align-self: center;
+    padding: 28px;
+}
+
+.activity-post-content h4 {
+    margin-bottom: 16px;
+    color: var(--navy);
+    font-size: 21px;
+    line-height: 1.35;
+}
+
+.activity-post-content p {
+    margin-top: 12px;
+    color: var(--gray-500);
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+.activity-post-content .activity-post-congratulations {
+    color: var(--navy);
+    font-weight: 700;
+}
+
+@media (max-width: 850px) {
+    .activity-post {
+        grid-template-columns: 1fr;
+    }
+
+    .activity-post-content {
+        padding: 24px;
+    }
+}
+
+@media (max-width: 430px) {
+    .activity-sector-title {
+        font-size: 18px;
+    }
+
+    .activity-post-content {
+        padding: 20px;
+    }
+
+    .activity-post-content h4 {
+        font-size: 18px;
+    }
+}
+
 /* =====================================================
    SH.F.K. PËRPARIMI – ÇEGRAN
    MAIN STYLESHEET

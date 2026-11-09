@@ -106,7 +106,12 @@ const translations = {
             label: "AKTIVITETET",
             heading: "Mësojmë edhe <span>përmes aktiviteteve</span>",
             text: "Aktivitetet shkollore ndihmojnë nxënësit të zhvillojnë kreativitetin dhe aftësitë e tyre.",
-            simple: "Aktivitetet shkollore do të përditësohen së shpejti, me fokus në zhvillimin e nxënësve, sportin, kulturën dhe bashkëpunimin."
+            sector: "Arsimi teknik dhe Informatika",
+            videoCaption: "Projektet e realizuara me BBC micro V2",
+            postTitle: "🌋🗺️ HARTA DHE VULLKANI INTELIGJENT",
+            postParagraph1: "Nxënësit tanë, përmes kreativitetit, imagjinatës dhe teknologjisë, realizuan dy projekte interesante me <strong>BBC micro V2</strong>: Hartën inteligjente të RMV-së dhe Vullkanin inteligjent.",
+            postParagraph2: "Përmes këtyre projekteve, ata ndërthurën njohuritë nga lëndë të ndryshme me programimin dhe eksperimentimin praktik, duke dëshmuar se të mësuarit bëhet edhe më argëtues kur idetë shndërrohen në vepra! 👏💡",
+            postCongratulations: "Urime nxënësve për punën dhe kreativitetin!"
         },
         news: {
             label: "NJOFTIME",
@@ -209,7 +214,12 @@ const translations = {
             label: "АКТИВНОСТИ",
             heading: "Учиме и преку <span>активности</span>",
             text: "Школските активности им помагаат на учениците да развијат креативност и вештини.",
-            simple: "Школските активности наскоро ќе се ажурираат, со фокус на развојот на учениците, спортот, културата и соработката."
+            sector: "Техничко образование и информатика",
+            videoCaption: "Проекти изработени со BBC micro V2",
+            postTitle: "🌋🗺️ ИНТЕЛИГЕНТНА КАРТА И ВУЛКАН",
+            postParagraph1: "Нашите ученици, преку креативност, имагинација и технологија, реализираа два интересни проекти со <strong>BBC micro V2</strong>: Интелигентната карта на РСМ и Интелигентниот вулкан.",
+            postParagraph2: "Преку овие проекти, тие ги поврзаа знаењата од различни предмети со програмирањето и практичните експерименти, докажувајќи дека учењето е уште позабавно кога идеите се претвораат во дела! 👏💡",
+            postCongratulations: "Честитки до учениците за трудот и креативноста!"
         },
         news: {
             label: "НОВОСТИ",
